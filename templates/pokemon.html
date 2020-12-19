@@ -2,6 +2,10 @@
 {% extends "basic.html" %}
 
 {% block content %}
-<h1>This is page for: {{name|capitalize}}</h1>
-
+<h1>This is page for: {{pokemon_name}}</h1>
+{% if lower %}
+    <p>Lower case pokemon</p>
+{% else %}
+    <p>All uppercase</p>
+{% endif %}
 {% endblock %}
