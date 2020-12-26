@@ -5,7 +5,7 @@ app = Flask(__name__)
 def index():
     return render_template('home.html')
 
-
+## work on adding more pokemons
 @app.route('/pokemon')
 def poke_name():
     pokemon_name = request.args.get('pname')
