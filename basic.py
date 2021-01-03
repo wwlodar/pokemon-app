@@ -6,7 +6,7 @@ def index():
     return render_template('home.html')
 
 ## work on adding more pokemons
-@app.route('/pokemon')
+@app.route('/pokemon/<name>')
 def poke_name():
     pokemon_name = request.args.get('pname')
     lower_letter = any(c.islower() for c in pokemon_name)
