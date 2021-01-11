@@ -1,0 +1,13 @@
+<! DOCTYPE html>
+{% extends "basic.html" %}
+
+{% block content %}
+<h1>This is page for: {{pname}}</h1>
+{% if lower %}
+    <p>Lower case pokemon</p>
+{% else %}
+    <p>All uppercase</p>
+{% endif %}
+
+<h1> {{response.status_code}} </h1>
+{% endblock %}
