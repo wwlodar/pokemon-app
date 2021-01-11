@@ -7,7 +7,7 @@ app = Flask(__name__)
 def index():
     return render_template('home.html')
 
-@app.route('/pokemon')
+@app.route('/pokemon/<name>')
 def poke_name():
     pname = request.args.get('pname')
     pname = pname.lower()
@@ -20,5 +20,5 @@ def page_not_found(e):
     return render_template('404.html'), 404
 if __name__ == '__main__':
     app.run(debug = True)
-##base
+
 

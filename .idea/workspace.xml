@@ -4,8 +4,8 @@
     <list default="true" id="fb01fafb-e590-4ec7-b448-b70f5230d71d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basic.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pokemon.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pokemon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xxxx.py" beforeDir="false" afterPath="$PROJECT_DIR$/xxxx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +41,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.basic">
-    <configuration name="basic" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="basic" type="PythonConfigurationType" factoryName="Python">
       <module name="pokemon-app" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -85,7 +85,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.basic" />
         <item itemvalue="Python.xxxx" />
       </list>
     </recent_temporary>
