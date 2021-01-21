@@ -2,14 +2,23 @@
 {% extends "basic.html" %}
 
 {% block content %}
-<h1>This is page for: {{pname}}</h1>
+
+<center>
+<h1 class="yellow">This is page for: {{pname}}</h1>
 {% if lower %}
     <p>Lower case pokemon</p>
 {% else %}
     <p>All uppercase</p>
 {% endif %}
+<h1> Type: </h1>
 
-<h1> Type: {{anali}} </h1>
 
+{% if anali == "electric" %}
+    <p class = "yellow">electric</p>
+{% else %}
+    <p class = "blue">{{anali}}</p>
+    {% endif %}
+
+</center>
 
 {% endblock %}
