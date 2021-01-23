@@ -2,7 +2,7 @@
 {% extends "basic.html" %}
 
 {% block content %}
-
+<link rel="stylesheet" href="static/main.css">
 <center>
 <h1 class="yellow">This is page for: {{pname}}</h1>
 {% if lower %}
@@ -10,13 +10,12 @@
 {% else %}
     <p>All uppercase</p>
 {% endif %}
-<h1> Type: </h1>
+    <h1> Type </h1>
 
-
-{% if anali == "electric" %}
-    <p class = "yellow">electric</p>
+{% if chosen_pokemon.type1() == "electric" %}
+    <p class = "yellow">{{chosen_pokemon.type1()}}</p>
 {% else %}
-    <p class = "blue">{{anali}}</p>
+    <p class = "blue">{{chosen_pokemon.type1()}}</p>
     {% endif %}
 
 </center>
