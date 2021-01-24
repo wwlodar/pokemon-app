@@ -8,12 +8,6 @@ from dictor import dictor
 ##print(todos)
 ##print(anali)
 
-class Pokemon():
-    def __init__(self, pname):
-        self.pokemon_data =  requests.get('https://pokeapi.co/api/v2/pokemon/' + str(pname)).json()
-
-    def typeee(self):
-        return dictor(self.pokemon_data, 'types.1')
-
-p = Pokemon("nidoqueen")
-print(p.typeee())
+number = 42
+response = requests.get("https://pokeres.bastionbot.org/images/pokemon/" + str(number) + str(".png"))
+print(response.text)

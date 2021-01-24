@@ -2,22 +2,68 @@
 {% extends "basic.html" %}
 
 {% block content %}
-<link rel="stylesheet" href="static/main.css">
+
 <center>
-<h1 class="yellow">This is page for: {{pname}}</h1>
-{% if lower %}
-    <p>Lower case pokemon</p>
-{% else %}
-    <p>All uppercase</p>
-{% endif %}
-    <h1> Type </h1>
-
-{% if chosen_pokemon.type1() == "electric" %}
-    <p class = "yellow">{{chosen_pokemon.type1()}}</p>
-{% else %}
-    <p class = "blue">{{chosen_pokemon.type1()}}</p>
-    {% endif %}
-
+    <h1>{{chosen_pokemon.pokemon_name()}}, I choose you!</h1>
 </center>
-
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src={{chosen_pokemon.pokemon_photo()}} width="310" class=floatRight>
+        </div>
+        <div class = "col-md-6"><b>
+            {% for item in chosen_pokemon.pokemon_type() %}
+                {% if item == None %}
+                    {{pass}}
+                {% else %}
+                    <span class = {{item}}>{{item}}-type</span>
+                {% endif %}
+            {% endfor %}
+        </b>
+            <span>pokemon from</span>
+            {% if chosen_pokemon.pokemon_number <= 151 %}
+                <span>Generation I</span>
+            {% elif 151 < chosen_pokemon.pokemon_number <= 251%}
+                <span>Generation II</span>
+            {% elif 251 < chosen_pokemon.pokemon_number <= 386%}
+                <span>Generation III</span>
+            {% elif 386 < chosen_pokemon.pokemon_number <= 493%}
+                <span>Generation IV</span>
+            {% elif 493 < chosen_pokemon.pokemon_number <= 649%}
+                <span>Generation V</span>
+            {% elif 649 < chosen_pokemon.pokemon_number <= 721%}
+                <span>Generation VI</span>
+            {% elif 721 < chosen_pokemon.pokemon_number <= 809%}
+                <span>Generation VII</span>
+            {% else %}
+                <span>Generation VIII</span>
+            {% endif %}
+            <div><br>
+                <p>HP: {{chosen_pokemon.pokemon_hp()}}</p>
+                <p>Attack: {{chosen_pokemon.pokemon_attack()}}</p>
+                <p>Defense: {{chosen_pokemon.pokemon_defense()}}</p>
+                <p>Speed: {{chosen_pokemon.pokemon_speed()}}</p>
+            </div>
+            <div>
+                <span>Weak against:</span>
+                {% for item in chosen_pokemon.pokemon_weak() %}
+                    {% if item == None %}
+                        {{pass}}
+                    {% else %}
+                <span class = {{item}}><b>{{item}}-type</span></b>
+                    {% endif %}
+                {% endfor %}
+                <p></p>
+                <span>Strong against:</span>
+                {% for item in chosen_pokemon.pokemon_strong() %}
+                    {% if item == None %}
+                        {{pass}}
+                    {% else %}
+                <span class = {{item}}><b>{{item}}-type</span></b>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

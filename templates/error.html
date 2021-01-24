@@ -8,8 +8,12 @@
     <title>Error!</title>
 </head>
 <body>
-    <h1>{{pname}} is not a Pokemon. Please check your spelling</h1>
-
+{% if pname == "nidoran" %}
+    <p>If you want to check male Nidoran, please type in "Nidoran-m".</p>
+    <p>If you want to check female Nidoran, please type in "Nidoran-f".</p>
+{% else %}
+    <p>{{pname}} is not a Pokemon. Please check your spelling</p>
+{% endif %}
 <a href="http://127.0.0.1:5000/" class="btn btn-info" role="button">Try again!</a>
 </body>
 </center>

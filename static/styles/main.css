@@ -1,0 +1,68 @@
+@charset “UTF-8″;
+    h1, .h1 {
+    font-size: 3.1875rem;
+    }
+
+.electric{
+color:#f9ca24;
+}
+
+.ground{
+color:#602c18;
+}
+
+.poison{
+color: #590059;
+}
+
+.fire{
+color:#e50000;
+}
+.rock{
+  color: brown;
+}
+.psychic{
+color:#fd6c9e;
+}
+
+.grass{
+color:#009432;
+}
+
+.water{
+color:#00ace6;
+}
+
+.fairy{
+color:#EEBBD7;
+}
+
+.ice{
+color:90cbe8;
+}
+
+.bug{
+color:#6DA264;
+}
+
+.steel{
+color:#8c8c8c;
+}
+
+.ghost{
+color: #4e2554;
+}
+
+.fighting {
+color: #ff6632;
+}
+
+.flying{
+color: #b2b2b2;
+}
+
+.floatRight{
+float:right;
+margin-left:20px;
+margin-right:20px;
+}
